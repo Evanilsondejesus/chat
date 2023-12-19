@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+
+
+  
+</head>
+<body style="background-color: rgba(25, 216, 228, 0.2);">
+   
+
+
+
+
+  <div style="background-color:  rgba(100, 164, 133, 1);;box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.25); " class="fixed-top"  >
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="home.html">home</a></li>
+  <li class="breadcrumb-item active" aria-current="page">chat</li>
+  </ol>
+          
+   
+</nav>
+    
+
+
+<div class="w-75 text-center d-flex mb-3">
+<div  style="width: 50px; height: 50px; border-radius: 50%;" class="bg-danger"></div>
+</div>
+</div>
+</div>
+        
+<div   >
+
+  <ol id="lista" class="overflow-scroll" ></ol>
+</div>
+        
+
+
+
+
+
+
+
+
+        <style>
+
+
+.conversa1{
+         float: left;
+        background-color: rgba(240, 255, 207, 1);
+        clear: both;
+        width: 40vw;
+        border: 1px solid;
+        display: block;
+        margin: 3px;
+        margin-left: 15vw;
+
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-top-left-radius: 12px;
+        padding: 12px;
+        } 
+        
+
+
+        .conversa2{
+         float: right;
+        background-color: rgba(248, 251, 241, 1);
+        clear: both;
+        display: block;
+        width: 40vw;
+        margin: 3px;
+        border-radius: 1px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-top-left-radius: 12px;
+
+        margin-right: 15vw;
+        border: 1px solid;
+        padding: 12px;
+        
+        } 
+
+
+
+        li{
+        display: block;
+        }
+        
+ol{
+  list-style-type: none;
+}
+
+.texto_sim {
+  width: 100%;
+  height: 100%;
+    margin-top: 20%;
+    max-height: 300px; /* Defina a altura máxima desejada */
+    min-height: 100px;
+    padding-bottom: 100%;
+   
+    overflow-y: auto; 
+    border: 1px solid #ccc;
+}
+
+
+#lista{
+  overflow-y: auto;
+  margin-top: 20%;
+  max-height: 600px; /* Defina a altura máxima desejada */
+    padding-bottom: 400px;
+  
+}</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<div class="fixed-bottom d-flex container-fluid p-2  w-100  ">
+  <div class="mx-auto w-75">
+  
+  
+  
+      <input  placeholder="digite..." class="w-75 rounded-5 p-2"  id="message_input"> 
+  
+  
+      <button class="h-25 bg-transparent border-0"  id="nextPage" onclick="conversa(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+          <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+        </svg>
+  
+      </button>
+  
+  
+  
+  
+  
+  </div>
+      
+    </div>
+    
+ 
+
+<script src="chat.js"></script>
+
+
+
+
+</body>
+</html>
